@@ -2,7 +2,7 @@ let timer;
 let period;
 
 function setup() {
-  createCanvas(300, 300);
+  createCanvas(600, 600);
   timer = new Timer();
   period = new Period();
 }
@@ -29,13 +29,13 @@ class Clock {
 
   move() {
     let angle = map(millis() % 2000, 0, 2000, 0, PI * 2);
-    rotate(sin(angle) * 1 * this.sign);
-    translate(0, 100);
+    rotate(sin(angle) * 0.5 * this.sign);
+    translate(0, 200);
   }
 
   show() {
     fill(this.color);
-    textSize(50);
+    textSize(40);
     textAlign(CENTER);
     translate(width / 2, height /2);
     this.move();
